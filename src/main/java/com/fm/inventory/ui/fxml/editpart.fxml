@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.fm.inventory.ui.custom.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane hgap="0.0" prefHeight="647.0" prefWidth="600.0" vgap="0.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.fm.inventory.ui.part.EditPartController" styleClass="grid">
+  <children>
+    <Label fx:id="operationLbl" prefHeight="22.000099999997474" prefWidth="175.0" styleClass="section-label" text="Add Part" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <RadioButton fx:id="outsourcedRbtn" mnemonicParsing="false" onAction="#handleChangeTypeRbtn" text="Outsourced" GridPane.columnIndex="4" GridPane.rowIndex="0">
+      <toggleGroup>
+        <ToggleGroup fx:id="typeTGrp" />
+      </toggleGroup>
+    </RadioButton>
+    <Label alignment="CENTER_RIGHT" contentDisplay="LEFT" text="ID" textAlignment="LEFT" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Label text="Name" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Label text="Inv" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <Label text="Price/Cost" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Label text="Max" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    <Label fx:id="variableFieldLbl" text="Company Name" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+    <TextField fx:id="idTxt" disable="false" editable="false" focusTraversable="false" prefHeight="45.0" prefWidth="80.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+    <TextField fx:id="nameTxt" prefHeight="45.0" prefWidth="80.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+    <IntegerTextField fx:id="invTxt" prefHeight="45.0" prefWidth="80.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+    <DecimalTextField fx:id="priceTxt" prefHeight="45.0" prefWidth="80.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+    <IntegerTextField fx:id="maxTxt" prefHeight="45.0" prefWidth="80.0" styleClass="maxmin-txt" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+    <TextField fx:id="companyNameTxt" prefHeight="45.0" prefWidth="80.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+    <RadioButton fx:id="inhouseRbtn" mnemonicParsing="false" onAction="#handleChangeTypeRbtn" text="In-House" toggleGroup="$typeTGrp" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="0" />
+    <Label text="Min" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+    <IntegerTextField fx:id="minTxt" prefHeight="45.0" prefWidth="80.0" styleClass="maxmin-txt" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+    <Button alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#handleGuardarAction" prefHeight="31.0" prefWidth="105.0" text="Save" textAlignment="LEFT" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+    <Button alignment="CENTER_LEFT" contentDisplay="LEFT" mnemonicParsing="false" onAction="#handleCancelAction" prefHeight="31.0" prefWidth="105.0" text="Cancel" textAlignment="LEFT" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+    <IntegerTextField fx:id="machineIDTxt" disable="false" prefHeight="45.0" prefWidth="211.0" visible="false" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="21.0" prefWidth="21.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="100.0" prefWidth="158.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="100.0" prefWidth="176.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.0" minWidth="40.0" prefWidth="55.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="100.0" prefWidth="150.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="40.0" prefWidth="40.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="81.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="81.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="81.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="81.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="81.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>
